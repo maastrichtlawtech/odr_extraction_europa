@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
+HTML_FILE_PATH = 'adr_full-html.html'
+
+
 def read_html(path):
     opened = open(path,'r', encoding="utf8")
     html = opened.read()
@@ -54,7 +57,7 @@ def get_line_before_this(text,index):
     return last_full_line,start_of_line
 
 if __name__ == "__main__":
-    text = read_html('adr_full-html.html')
+    text = read_html(HTML_FILE_PATH)
 
     total_data = list()
 
